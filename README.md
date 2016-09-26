@@ -1,5 +1,7 @@
 # JpStockRule
 
+[![Build Status](https://travis-ci.org/kyanagi/jp_stock_rule.svg?branch=master)](https://travis-ci.org/kyanagi/jp_stock_rule)
+
 JpStockRule is a utility for stock markets in Japan.
 
 You can get price limits and tick size of stocks.
