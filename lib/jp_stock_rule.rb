@@ -60,7 +60,7 @@ module JpStockRule
     [30_000_000, 5_000, 10_000],
     [50_000_000, 10_000, 50_000],
     [Float::INFINITY, 10_000, 100_000],
-  ]
+  ].freeze
   def self.tick_size(base_price, topix100: false)
     TICK_SIZES.detect { |upper_limit, | base_price <= upper_limit }[topix100 ? 1 : 2]
   end
