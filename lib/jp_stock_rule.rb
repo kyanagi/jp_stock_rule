@@ -38,6 +38,8 @@ module JpStockRule
     [50_000_000, 7_000_000],
     [Float::INFINITY, 10_000_000],
   ].freeze
+
+  # Returns the limit of price change in a day.
   def self.price_limit(base_price)
     PRICE_LIMITS.detect { |upper_limit, | base_price < upper_limit }[1]
   end
@@ -61,6 +63,8 @@ module JpStockRule
     [50_000_000, 10_000, 50_000],
     [Float::INFINITY, 10_000, 100_000],
   ].freeze
+
+  # Returns the tick size.
   def self.tick_size(base_price, topix100: false)
     TICK_SIZES.detect { |upper_limit, | base_price <= upper_limit }[topix100 ? 1 : 2]
   end
