@@ -68,4 +68,12 @@ module JpStockRule
   def self.tick_size(base_price, topix100: false)
     TICK_SIZES.detect { |upper_limit, | base_price <= upper_limit }[topix100 ? 1 : 2]
   end
+
+  # Rounds the price to the tick.
+  #
+  #   JpStockRule.round_price(3001) # => 3000
+  def self.round_price(price, topix100: false)
+    tick = tick_size(price, topix100: topix100)
+    (price / tick).to_i * tick
+  end
 end
