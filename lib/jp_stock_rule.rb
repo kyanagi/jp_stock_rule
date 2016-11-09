@@ -1,4 +1,5 @@
 require "jp_stock_rule/version"
+require "jp_stock_rule/core_ext/date"
 
 module JpStockRule
   # http://www.jpx.co.jp/equities/trading/domestic/06.html
