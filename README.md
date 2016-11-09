@@ -42,6 +42,18 @@ For TOPIX100 stocks:
 JpStockRule.tick_size(7000, topix100: true) # => 1
 ```
 
+Is the market open today?:
+
+```ruby
+Date.today.jpx_business_day?
+```
+
+Getting the next market-open day:
+
+```ruby
+Date.today.next_jpx_business_day
+```
+
 ## Development
 
 After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake test` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
